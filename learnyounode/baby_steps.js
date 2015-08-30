@@ -41,7 +41,7 @@ learnyounode will be supplying arguments to your program when you run learnyouno
 sum = 0;
 
 for (var i = 2; i < process.argv.length; i++) {
-	sum += Number(process.argv[i]);
+	sum += +process.argv[i];
 }
 
 console.log(sum)
