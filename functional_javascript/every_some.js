@@ -70,9 +70,9 @@ Use array#some and Array#every to check every user passed to your returned funct
 
 function checkUsersValid(goodUsers) {
   return function allUsersValid(submittedUsers) {
-    return submittedUsers.every(function(submittedUsers){
-      return goodUsers.some(function(goodUsers){
-        return submittedUsers == goodUsers
+    return submittedUsers.every(function(submittedUser){
+      return goodUsers.some(function(goodUser){
+        return submittedUser.id == goodUser.id
       })
     })
   }
