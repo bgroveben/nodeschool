@@ -30,3 +30,50 @@ Documentation on the fs module can be found by pointing your browser here:
  » To verify your program, run: learnyounode verify program.js
  » For help run: learnyounode help
 */
+
+var fs = require('fs')
+
+function readLines() {
+  fs.readFile(process.argv[2], function doneReading(err, contents) {
+    var result = contents.toString().split('\n').length -1
+    console.log(result)
+  })
+}
+readLines()
+
+/*
+Your submission results compared to the expected:
+
+                 ACTUAL                                 EXPECTED
+────────────────────────────────────────────────────────────────────────────────
+
+   "3"                                 ==    "3"
+   ""                                  ==    ""
+
+────────────────────────────────────────────────────────────────────────────────
+
+✓ Submission results match expected
+✓ Used asynchronous method: fs.readFile()
+
+# PASS
+
+Your solution to MY FIRST ASYNC I/O! passed!
+
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    var fs = require('fs')
+    var file = process.argv[2]
+
+    fs.readFile(file, function (err, contents) {
+      // fs.readFile(file, 'utf8', callback) can also be used
+      var lines = contents.toString().split('\n').length - 1
+      console.log(lines)
+    })
+
+────────────────────────────────────────────────────────────────────────────────
+
+You have 9 challenges left.
+Type 'learnyounode' to show the menu.
+
+*/

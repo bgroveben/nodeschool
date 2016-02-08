@@ -1,6 +1,5 @@
 NodeSchool tutorials!  http://nodeschool.io/#workshoppers
 
-learnyounode is still a bit over my head. 
-I think I need a better understanding of JS.
+I'm just pecking my way through whatever module is most relevant to me at the moment.
 
-Functional Javascript.
+I'm currently working on learnyounode, functional-javascript-workshop, and scope-chains-closures.
